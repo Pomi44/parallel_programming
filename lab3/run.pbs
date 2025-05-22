@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH --job-name=main
+#SBATCH --time=0:10:00
+#SBATCH --ntasks-per-node=20
+#SBATCH --partition batch
+
+module load intel/mpi4
+mpirun -r ssh ./main_mpi
